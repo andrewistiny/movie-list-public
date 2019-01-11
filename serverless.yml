@@ -69,6 +69,30 @@ functions:
           path: getMovie
           method: get
           cors: true
+  postMovie:
+    handler: routes/post.postMovie
+    events:
+      - http:
+          path: postMovie
+          method: post
+          cors: true
+          integration: lambda
+  updateMovie:
+    handler: routes/put.updateMovie
+    events:
+      - http:
+          path: updateMovie
+          method: put
+          cors: true
+          integration: lambda
+  deleteMovie:
+    handler: routes/delete.deleteMovie
+    events:
+      - http:
+          path: deleteMovie
+          method: delete
+          cors: true
+          integration: lambda
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
